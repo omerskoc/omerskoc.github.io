@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kredi ve Banka Kartları Bonusları</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Bank Bonus Offers</h1>
-
-    <div class="filter-sort">
-        <button>Sort and Filter</button>
-    </div>
 
     <div class="card-grid">
         <!-- Chime -->
@@ -28,7 +34,10 @@
             <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
                 <a class="button" href="https://chime.com/r/a/omerkoc3" target="_blank">View Offer</a>
-                <a class="button details" href="chime-details.html" target="_blank">Details</a>
+                <button class="button details" onclick="toggleDetails('chime-details')">Details</button>
+            </div>
+            <div id="chime-details" style="display: none;">
+                <p>Chime offers a $100 bonus when you receive $200 or more in direct deposits. No fees, available nationwide.</p>
             </div>
         </div>
 
@@ -45,7 +54,90 @@
             <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
                 <a class="button" href="https://moneylion.com" target="_blank">View Offer</a>
-                <a class="button details" href="moneylion-details.html" target="_blank">Details</a>
+                <button class="button details" onclick="toggleDetails('moneylion-details')">Details</button>
+            </div>
+            <div id="moneylion-details" style="display: none;">
+                <p>MoneyLion offers a $55 bonus with a $200 direct deposit. $1/month fee. Available nationwide.</p>
+            </div>
+        </div>
+
+        <!-- Chase Checking -->
+        <div class="card">
+            <div class="card-header">
+                <img src="chase-logo.png" alt="Chase Logo" class="bank-logo">
+                <h3>Chase</h3>
+            </div>
+            <p>Personal Bank Account</p>
+            <p><strong>Bonus:</strong> $300</p>
+            <p><strong>How to Get:</strong> 90 days with 1 deposit of $500+</p>
+            <p><strong>Fee:</strong> None</p>
+            <p><strong>Availability:</strong> Nationwide</p>
+            <div class="card-actions">
+                <a class="button" href="https://accounts.chase.com/raf/share/2991880913" target="_blank">View Offer</a>
+                <button class="button details" onclick="toggleDetails('chase-details')">Details</button>
+            </div>
+            <div id="chase-details" style="display: none;">
+                <p>Open a Chase checking account and receive $300 after one $500+ direct deposit within 90 days. No fees.</p>
+            </div>
+        </div>
+
+        <!-- American Express -->
+        <div class="card">
+            <div class="card-header">
+                <img src="amex-logo.png" alt="American Express Logo" class="bank-logo">
+                <h3>American Express</h3>
+            </div>
+            <p>Personal Credit Card</p>
+            <p><strong>Bonus:</strong> $250</p>
+            <p><strong>How to Get:</strong> Apply and spend</p>
+            <p><strong>Fee:</strong> $95 (first year free)</p>
+            <p><strong>Availability:</strong> Nationwide</p>
+            <div class="card-actions">
+                <a class="button" href="https://americanexpress.com/en-us/referral/blue-cash-preferred-credit-card?ref=OMERKYVID&XL=MITNS" target="_blank">View Offer</a>
+                <button class="button details" onclick="toggleDetails('amex-details')">Details</button>
+            </div>
+            <div id="amex-details" style="display: none;">
+                <p>American Express offers a $250 bonus. 95$ annual fee, first year free. Get up to 6% cashback.</p>
+            </div>
+        </div>
+
+        <!-- Amazon Prime -->
+        <div class="card">
+            <div class="card-header">
+                <img src="amazon-logo.png" alt="Amazon Logo" class="bank-logo">
+                <h3>Amazon Prime</h3>
+            </div>
+            <p>Personal Credit Card</p>
+            <p><strong>Bonus:</strong> $100</p>
+            <p><strong>How to Get:</strong> Apply as a Prime member</p>
+            <p><strong>Fee:</strong> None</p>
+            <p><strong>Availability:</strong> Nationwide</p>
+            <div class="card-actions">
+                <a class="button" href="https://amazon.com/dp/BT00LN946S?externalReferenceId=7f0c9dec-3b0a-4c7a-8412-cf271a7910a8" target="_blank">View Offer</a>
+                <button class="button details" onclick="toggleDetails('amazon-details')">Details</button>
+            </div>
+            <div id="amazon-details" style="display: none;">
+                <p>Amazon Prime card offers $100 bonus for Prime members, no fees, 5% cashback on Amazon purchases.</p>
+            </div>
+        </div>
+
+        <!-- Chase Sapphire -->
+        <div class="card">
+            <div class="card-header">
+                <img src="chase-logo.png" alt="Chase Logo" class="bank-logo">
+                <h3>Chase Sapphire</h3>
+            </div>
+            <p>Personal Credit Card</p>
+            <p><strong>Bonus:</strong> $600</p>
+            <p><strong>How to Get:</strong> Apply and spend</p>
+            <p><strong>Fee:</strong> $95</p>
+            <p><strong>Availability:</strong> Nationwide</p>
+            <div class="card-actions">
+                <a class="button" href="https://referyourchasecard.com/19o/JC41OMNCSB" target="_blank">View Offer</a>
+                <button class="button details" onclick="toggleDetails('sapphire-details')">Details</button>
+            </div>
+            <div id="sapphire-details" style="display: none;">
+                <p>Chase Sapphire offers a $600 bonus. $95 annual fee. Earn rewards on purchases.</p>
             </div>
         </div>
     </div>
