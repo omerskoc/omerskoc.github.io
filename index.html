@@ -5,86 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kredi ve Banka Kartları Bonusları</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .card-container {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .card-container h3 {
-            margin-top: 0;
-        }
-        .card-container .view-offer, .card-container .details {
-            margin-right: 10px;
-        }
-        .bonus-amount {
-            color: green;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Kredi ve Banka Kartları Bonusları</h1>
+    <h1>Bank Bonus Offers</h1>
 
-    <!-- Banka Kartı Bölümü -->
-    <h2>❇️ BANKA KARTI ❇️</h2>
-    
-    <div class="card-container">
-        <h3>Chase - Checking Account</h3>
-        <p>Bonus: <span class="bonus-amount">300$</span></p>
-        <p>Yapmanız gereken: 90 gün içinde 500$+ direct deposit almak</p>
-        <p>Yıllık Ücret: Yok</p>
-        <p>Eyalet: Tüm ABD</p>
-        <a class="view-offer" href="https://accounts.chase.com/raf/share/2991880913" target="_blank">View Offer</a>
-        <a class="details" href="chase-details.html" target="_blank">Details</a>
+    <div class="filter-sort">
+        <button>Sort and Filter</button>
     </div>
 
-    <div class="card-container">
-        <h3>Chime - Bank Account</h3>
-        <p>Bonus: <span class="bonus-amount">100$</span></p>
-        <p>Yapmanız gereken: 200$ direct deposit almak</p>
-        <p>Yıllık Ücret: Yok</p>
-        <p>Eyalet: Online</p>
-        <a class="view-offer" href="https://chime.com/r/a/omerkoc3" target="_blank">View Offer</a>
-        <a class="details" href="chime-details.html" target="_blank">Details</a>
-    </div>
+    <div class="card-grid">
+        <!-- Chime -->
+        <div class="card">
+            <div class="card-header">
+                <img src="chime-logo.png" alt="Chime Logo" class="bank-logo">
+                <h3>Chime</h3>
+            </div>
+            <p>Personal Bank Account</p>
+            <p><strong>Bonus:</strong> $100</p>
+            <p><strong>How to Get:</strong> $200 Direct Deposit</p>
+            <p><strong>Fee:</strong> None</p>
+            <p><strong>Availability:</strong> Nationwide</p>
+            <div class="card-actions">
+                <a class="button" href="https://chime.com/r/a/omerkoc3" target="_blank">View Offer</a>
+                <a class="button details" href="chime-details.html" target="_blank">Details</a>
+            </div>
+        </div>
 
-    <!-- Kredi Kartı Bölümü -->
-    <h2>❇️ KREDI KARTLARI ❇️</h2>
-    
-    <div class="card-container">
-        <h3>American Express - Blue Cash Preferred</h3>
-        <p>Bonus: <span class="bonus-amount">250$</span></p>
-        <p>Yapmanız gereken: Kartı açmak ve alışveriş yapmak</p>
-        <p>Yıllık Ücret: 95$ (ilk yıl ücretsiz)</p>
-        <p>Eyalet: Tüm ABD</p>
-        <a class="view-offer" href="https://americanexpress.com/en-us/referral/blue-cash-preferred-credit-card?ref=OMERKYVID&XL=MITNS" target="_blank">View Offer</a>
-        <a class="details" href="amex-details.html" target="_blank">Details</a>
-    </div>
-
-    <div class="card-container">
-        <h3>Amazon Prime Credit Card</h3>
-        <p>Bonus: <span class="bonus-amount">100$</span></p>
-        <p>Yapmanız gereken: Amazon Prime uyeliği ile kart almak</p>
-        <p>Yıllık Ücret: Yok</p>
-        <p>Eyalet: Online</p>
-        <a class="view-offer" href="https://amazon.com/dp/BT00LN946S?externalReferenceId=7f0c9dec-3b0a-4c7a-8412-cf271a7910a8" target="_blank">View Offer</a>
-        <a class="details" href="amazon-details.html" target="_blank">Details</a>
-    </div>
-
-    <div class="card-container">
-        <h3>Chase Sapphire Credit Card</h3>
-        <p>Bonus: <span class="bonus-amount">600$</span></p>
-        <p>Yapmanız gereken: Kart açmak ve belirli bir harcama yapmak</p>
-        <p>Yıllık Ücret: 95$</p>
-        <p>Eyalet: Tüm ABD</p>
-        <a class="view-offer" href="https://referyourchasecard.com/19o/JC41OMNCSB" target="_blank">View Offer</a>
-        <a class="details" href="chase-sapphire-details.html" target="_blank">Details</a>
+        <!-- MoneyLion -->
+        <div class="card">
+            <div class="card-header">
+                <img src="moneylion-logo.png" alt="MoneyLion Logo" class="bank-logo">
+                <h3>MoneyLion</h3>
+            </div>
+            <p>Personal Bank Account</p>
+            <p><strong>Bonus:</strong> $55</p>
+            <p><strong>How to Get:</strong> $200 Direct Deposit</p>
+            <p><strong>Fee:</strong> $1/month*</p>
+            <p><strong>Availability:</strong> Nationwide</p>
+            <div class="card-actions">
+                <a class="button" href="https://moneylion.com" target="_blank">View Offer</a>
+                <a class="button details" href="moneylion-details.html" target="_blank">Details</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
