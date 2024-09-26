@@ -55,6 +55,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            font-size: 14px;
         }
 
         .button:hover {
@@ -62,12 +63,21 @@
         }
 
         .details {
-            background-color: #555;
+            background-color: #2196f3;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 14px;
+            border: none;
         }
 
         .details:hover {
-            background-color: #444;
+            background-color: #1976d2;
         }
+
     </style>
     <script>
         function toggleDetails(id) {
@@ -105,7 +115,7 @@
             <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
                 <a class="button" href="https://www.chime.com/r/a/omerkoc3/" target="_blank">View Offer</a>
-                <button class="button details" onclick="toggleDetails('chime-details')">Details</button>
+                <button class="details" onclick="toggleDetails('chime-details')">Details</button>
             </div>
             <div id="chime-details" class="details-section" style="display: none;">
                 <p>Simply receive a qualifying direct deposit of $200 or more within the first 45 days, and you'll earn a $100 reward.</p>
@@ -125,7 +135,7 @@
             <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
                 <a class="button" href="https://accounts.chase.com/raf/share/2991880913" target="_blank">View Offer</a>
-                <button class="button details" onclick="toggleDetails('chase-details')">Details</button>
+                <button class="details" onclick="toggleDetails('chase-details')">Details</button>
             </div>
             <div id="chase-details" class="details-section" style="display: none;">
                 <p>Open a Chase Total Checking® account1 and make direct deposits totaling $500 or more within 90 days of coupon enrollment.</p>
@@ -148,7 +158,7 @@
             <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
                 <a class="button" href="https://americanexpress.com/en-us/referral/blue-cash-preferred-credit-card?ref=OMERKYVID&XL=MITNS" target="_blank">View Offer</a>
-                <button class="button details" onclick="toggleDetails('amex-details')">Details</button>
+                <button class="details" onclick="toggleDetails('amex-details')">Details</button>
             </div>
             <div id="amex-details" class="details-section" style="display: none;">
                 <p>Spend $3,000 on your new card within the first 6 months and earn $250 as a statement credit.</p>
@@ -169,7 +179,7 @@
             <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
                 <a class="button" href="https://amazon.com/dp/BT00LN946S?externalReferenceId=7f0c9dec-3b0a-4c7a-8412-cf271a7910a8" target="_blank">View Offer</a>
-                <button class="button details" onclick="toggleDetails('amazon-details')">Details</button>
+                <button class="details" onclick="toggleDetails('amazon-details')">Details</button>
             </div>
             <div id="amazon-details" class="details-section" style="display: none;">
                 <p>Get a $100 Amazon Gift Card instantly upon approval.</p>
@@ -189,7 +199,7 @@
             <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
                 <a class="button" href="https://referyourchasecard.com/19o/JC41OMNCSB" target="_blank">View Offer</a>
-                <button class="button details" onclick="toggleDetails('sapphire-details')">Details</button>
+                <button class="details" onclick="toggleDetails('sapphire-details')">Details</button>
             </div>
             <div id="sapphire-details" class="details-section" style="display: none;">
                 <p>60,000 (600$) bonus points after you spend $4,000 on purchases in the first 3 months from account opening.</p>
