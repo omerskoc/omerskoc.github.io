@@ -1,228 +1,29 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kredi ve Banka Kartları Bonusları</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .card {
-            background-color: #333;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .bank-logo {
-            width: 50px;
-            height: auto;
-        }
-
-        .card p {
-            margin: 5px 0;
-            color: white;
-        }
-
-        .card-actions {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-size: 14px;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        .details {
-            background-color: #2196f3;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-size: 14px;
-            border: none;
-        }
-
-        .details:hover {
-            background-color: #1976d2;
-        }
-
-    </style>
-    <script>
-        function toggleDetails(id) {
-            var allDetails = document.querySelectorAll(".details-section");
-            allDetails.forEach(function(detail) {
-                if (detail.id !== id) {
-                    detail.style.display = "none";
-                }
-            });
-
-            var details = document.getElementById(id);
-            if (details.style.display === "block") {
-                details.style.display = "none";
-            } else {
-                details.style.display = "block";
-            }
-        }
-    </script>
-</head>
-<body>
-    <h1>Bank Bonus Offers</h1>
-
-    <h2>Banka Kartları</h2>
-    <div class="card-grid">
-        <!-- Chime -->
-        <div class="card">
-            <div class="card-header">
-                <h3>Chime</h3>
-                <img src="chime-logo.png" alt="Chime Logo" class="bank-logo">
-            </div>
-            <p>Personal Bank Account</p>
-            <p><strong>Bonus:</strong> $100</p>
-            <p><strong>How to Get:</strong> $200 Direct Deposit</p>
-            <p><strong>Fee:</strong> None</p>
-            <p><strong>Availability:</strong> Nationwide</p>
             <div class="card-actions">
-                <a class="button" href="https://www.chime.com/r/a/omerkoc3/" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('chime-details')">Details</button>
-            </div>
-            <div id="chime-details" class="details-section" style="display: none;">
-                <p>Simply receive a qualifying direct deposit of $200 or more within the first 45 days, and you'll earn a $100 reward.</p>
-            </div>
-        </div>
-
-        <!-- Chase Checking -->
-        <div class="card">
-            <div class="card-header">
-                <h3>Chase</h3>
-                <img src="chase-logo.png" alt="Chase Logo" class="bank-logo">
-            </div>
-            <p>Personal Bank Account</p>
-            <p><strong>Bonus:</strong> $300</p>
-            <p><strong>How to Get:</strong> $500 Direct Deposit</p>
-            <p><strong>Fee:</strong> $12 or $0</p>
-            <p><strong>Availability:</strong> Nationwide</p>
-            <div class="card-actions">
-                <a class="button" href="https://accounts.chase.com/raf/share/2991880913" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('chase-details')">Details</button>
-            </div>
-            <div id="chase-details" class="details-section" style="display: none;">
-                <p>Open a Chase Total Checking® account1 and make direct deposits totaling $500 or more within 90 days of coupon enrollment.</p>
-            </div>
-        </div>
-
-        <!-- Bank of America Personal Bank Account -->
-        <div class="card">
-            <div class="card-header">
-                <h3>Bank of America</h3>
-                <img src="bofa-logo.png" alt="Bank of America Logo" class="bank-logo">
-            </div>
-            <p>Personal Bank Account</p>
-            <p><strong>Bonus:</strong> $200</p>
-            <p><strong>How to Get:</strong> Qualifying Direct Deposits totaling $2,000</p>
-            <p><strong>Fee:</strong> $12 or $0</p>
-            <p><strong>Availability:</strong> Nationwide</p>
-            <div class="card-actions">
-                <a class="button" href="https://promotions.bankofamerica.com/offers/chooseyourchecking200?cm_sp=DEP-Checking-_-Sept.23ProspectCampaign-_-DCB1L12E01_L1_checking_Checking_Prospect_200Offer_Sept23_L1Nav_2023Prospect200HpNavCta" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('bofa-bank-details')">Details</button>
-            </div>
-            <div id="bofa-bank-details" class="details-section" style="display: none;">
-                <p>Use offer code TWA200CIS when opening your new account to enroll in this offer.</p>
-            </div>
-        </div>
-    </div>
-
-    <h2>Kredi Kartları</h2>
-    <div class="card-grid">
-        <!-- American Express -->
-        <div class="card">
-            <div class="card-header">
-                <h3>American Express</h3>
-                <img src="amex-logo.png" alt="American Express Logo" class="bank-logo">
-            </div>
-            <p>Personal Credit Card</p>
-            <p><strong>Bonus:</strong> $250</p>
-            <p><strong>How to Get:</strong> Spend $3,000 in 6 months</p>
-            <p><strong>Fee:</strong> $0 intro annual fee for the first year, then $95</p>
-            <p><strong>Availability:</strong> Nationwide</p>
-            <div class="card-actions">
-                <a class="button" href="https://americanexpress.com/en-us/referral/blue-cash-preferred-credit-card?ref=OMERKYVID&XL=MITNS" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('amex-details')">Details</button>
-            </div>
-            <div id="amex-details" class="details-section" style="display: none;">
-                <p>Spend $3,000 on your new card within the first 6 months and earn $250 as a statement credit.</p>
-                <p>$0 intro annual fee for the first year, then $95 after.</p>
-            </div>
-        </div>
-
-        <!-- Amazon Prime -->
-        <div class="card">
-            <div class="card-header">
-                <h3>Amazon Prime</h3>
-                <img src="amazon-logo.png" alt="Amazon Logo" class="bank-logo">
-            </div>
-            <p>Personal Credit Card</p>
-            <p><strong>Bonus:</strong> $100</p>
-            <p><strong>How to Get:</strong> Instantly upon approval</p>
-            <p><strong>Fee:</strong> $0</p>
-            <p><strong>Availability:</strong> Nationwide</p>
-            <div class="card-actions">
-                <a class="button" href="https://amazon.com/dp/BT00LN946S?externalReferenceId=7f0c9dec-3b0a-4c7a-8412-cf271a7910a8" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('amazon-details')">Details</button>
+                <a class="button" href="https://amazon.com/dp/BT00LN946S?externalReferenceId=7f0c9dec-3b0a-4c7a-8412-cf271a7910a8" target="_blank">Teklifi Gör</a>
+                <button class="details" onclick="toggleDetails('amazon-details')">Detaylar</button>
             </div>
             <div id="amazon-details" class="details-section" style="display: none;">
-                <p>Get a $100 Amazon Gift Card instantly upon approval.</p>
+                <p>Onaylandığınızda anında 100$ Amazon hediye kartı kazanın.</p>
             </div>
         </div>
 
-        <!-- Discover Credit Card -->
+        <!-- Discover Kredi Kartı -->
         <div class="card">
             <div class="card-header">
                 <h3>Discover</h3>
-                <img src="discover-logo.png" alt="Discover Logo" class="bank-logo">
+                <img src="discover-logo.png" alt="Discover Logosu" class="bank-logo">
             </div>
-            <p>Personal Credit Card</p>
-            <p><strong>Bonus:</strong> $100</p>
-            <p><strong>How to Get:</strong> Use your card in the first 3 months</p>
-            <p><strong>Fee:</strong> $0</p>
-            <p><strong>Availability:</strong> Nationwide</p>
+            <p>Kişisel Kredi Kartı</p>
+            <p><strong>Bonus:</strong> 100$</p>
+            <p><strong>Nasıl Kazanılır:</strong> İlk 3 ay içinde kartınızı kullanın</p>
+            <p><strong>Ücret:</strong> Yok</p>
+            <p><strong>Geçerlilik:</strong> Tüm Ülke</p>
             <div class="card-actions">
-                <a class="button" href="https://refer.discover.com/s/omerseyfeddinkoc?advocate.partner_share_id=1197048646" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('discover-details')">Details</button>
+                <a class="button" href="https://refer.discover.com/s/omerseyfeddinkoc?advocate.partner_share_id=1197048646" target="_blank">Teklifi Gör</a>
+                <button class="details" onclick="toggleDetails('discover-details')">Detaylar</button>
             </div>
             <div id="discover-details" class="details-section" style="display: none;">
-                <p></p> <!-- No additional details were provided. -->
             </div>
         </div>
 
@@ -230,39 +31,19 @@
         <div class="card">
             <div class="card-header">
                 <h3>Bank of America® Customized Cash Rewards</h3>
-                <img src="bofa-logo.png" alt="Bank of America Logo" class="bank-logo">
+                <img src="bofa-logo.png" alt="Bank of America Logosu" class="bank-logo">
             </div>
-            <p>Personal Credit Card</p>
-            <p><strong>Bonus:</strong> $200</p>
-            <p><strong>How to Get:</strong> Spend $1,000 in 3 months</p>
-            <p><strong>Fee:</strong> $0</p>
-            <p><strong>Availability:</strong> Nationwide</p>
+            <p>Kişisel Kredi Kartı</p>
+            <p><strong>Bonus:</strong> 200$</p>
+            <p><strong>Nasıl Kazanılır:</strong> İlk 3 ayda 1.000$ harcayın</p>
+            <p><strong>Ücret:</strong> Yok</p>
+            <p><strong>Geçerlilik:</strong> Tüm Ülke</p>
             <div class="card-actions">
-                <a class="button" href="https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/?campaign=4071205~UN~en_US" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('bofa-credit-details')">Details</button>
+                <a class="button" href="https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/?campaign=4071205~UN~en_US" target="_blank">Teklifi Gör</a>
+                <button class="details" onclick="toggleDetails('bofa-credit-details')">Detaylar</button>
             </div>
             <div id="bofa-credit-details" class="details-section" style="display: none;">
-                <p>3% cash back in the category of your choice, 2% cash back at grocery stores and wholesale clubs, and 1% cash back on all other purchases.</p>
-            </div>
-        </div>
-
-        <!-- Chase Sapphire -->
-        <div class="card">
-            <div class="card-header">
-                <h3>Chase Sapphire</h3>
-                <img src="chase-logo.png" alt="Chase Logo" class="bank-logo">
-            </div>
-            <p>Personal Credit Card</p>
-            <p><strong>Bonus:</strong> $600</p>
-            <p><strong>How to Get:</strong> Spend $4,000 in 3 months</p>
-            <p><strong>Fee:</strong> $95</p>
-            <p><strong>Availability:</strong> Nationwide</p>
-            <div class="card-actions">
-                <a class="button" href="https://referyourchasecard.com/19o/JC41OMNCSB" target="_blank">View Offer</a>
-                <button class="details" onclick="toggleDetails('sapphire-details')">Details</button>
-            </div>
-            <div id="sapphire-details" class="details-section" style="display: none;">
-                <p>60,000 (600$) bonus points after you spend $4,000 on purchases in the first 3 months from account opening.</p>
+                <p>Seçtiğiniz kategoride %3, marketlerde ve toptan satış kulüplerinde %2 ve diğer tüm alışverişlerde %1 geri ödeme.</p>
             </div>
         </div>
     </div>
