@@ -17,7 +17,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #f4f4f4;
+            background-color: #fff;
             border-bottom: 1px solid #ccc;
         }
 
@@ -26,15 +26,32 @@
             font-weight: bold;
         }
 
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
         nav a {
-            margin: 0 15px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            position: relative;
         }
 
-        nav a:hover {
-            color: #007BFF;
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
         }
 
         .container {
@@ -79,7 +96,7 @@
     <header>
         <div class="logo">Omer Koc</div>
         <nav>
-            <a href="#about">About</a>
+            <a href="#about" class="active">About</a>
             <a href="#projects">Projects</a>
             <a href="#resume">Resume</a>
         </nav>
