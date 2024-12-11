@@ -90,6 +90,22 @@
             border-radius: 5px;
         }
 
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: #333;
+        }
+
         ul {
             list-style-type: disc;
             padding-left: 20px;
@@ -159,9 +175,14 @@
 
         <div id="project-details" class="section">
             <h1 class="section-title">Energy and Performance-Aware Task Scheduling</h1>
+            <p class="section-content"><strong>Spring 2024</strong></p>
+            <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">Optimization</span>
+                <span class="tag">Algorithms</span>
+            </div>
             <img src="images/project1-large.jpg" alt="Energy and Performance-Aware Task Scheduling" class="project-image">
             <div class="section-content">
-                <p><strong>Duration:</strong> Spring 2024</p>
                 <p><strong>Description:</strong></p>
                 <p>Designed and implemented task scheduling algorithms for a mobile cloud computing environment, focusing on minimizing energy consumption while meeting performance constraints. This project involved researching energy-efficient strategies and developing optimization algorithms tailored to mobile cloud systems.</p>
                 <p><strong>Key Features:</strong></p>
@@ -170,7 +191,6 @@
                     <li>Optimized energy consumption while meeting performance constraints.</li>
                     <li>Simulated the algorithms in a cloud computing environment.</li>
                 </ul>
-                <p><strong>Technologies Used:</strong> C++, Optimization, Algorithms</p>
             </div>
         </div>
 
