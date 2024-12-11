@@ -137,7 +137,7 @@
             width: 100%;
             max-width: 800px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             margin-top: 40px;
             padding-top: 20px;
@@ -159,22 +159,33 @@
         .footer-left .info {
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
 
         .footer-left .info p {
             margin: 5px 0;
-            text-align: center;
         }
 
         .footer-icons {
             display: flex;
             gap: 10px;
+            margin-top: 5px;
         }
 
         .footer-icons a img {
             width: 20px;
             height: 20px;
+        }
+
+        .footer-right nav {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .footer-right nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -259,11 +270,17 @@
             <h2 class="section-title">Education</h2>
             <div class="section-content">
                 <div class="item">
-                    <img src="education-logo.png" alt="Education Logo" class="logo">
                     <div class="text">
-                        <strong>Master's in Data Science</strong> - Northeastern University<br>
-                        Jan 2023 - June 2025 (Expected)<br>
-                        Boston, MA
+                        <strong>B.S. in Industrial Engineering</strong><br>
+                        Istanbul Technical University | Istanbul, Turkey<br>
+                        Sep 2016 - Jun 2021
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <strong>Master's in Data Science</strong><br>
+                        Northeastern University | Boston, MA<br>
+                        Jan 2023 - June 2025 (Expected)
                     </div>
                 </div>
             </div>
@@ -342,6 +359,13 @@
                     <a href="mailto:example@gmail.com"><img src="gmail-icon.png" alt="Gmail"></a>
                 </div>
             </div>
+        </div>
+        <div class="footer-right">
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+            </nav>
         </div>
     </footer>
 </body>
