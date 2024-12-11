@@ -137,7 +137,7 @@
             width: 100%;
             max-width: 800px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             margin-top: 40px;
             padding-top: 20px;
@@ -151,36 +151,30 @@
         }
 
         .footer-left img {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+        }
+
+        .footer-left .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-left .info p {
+            margin: 5px 0;
+            text-align: center;
         }
 
         .footer-icons {
             display: flex;
-            gap: 15px;
+            gap: 10px;
         }
 
-        .footer-icons a {
-            display: inline-block;
-        }
-
-        .footer-icons img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .footer-right nav {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .footer-right nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            margin-bottom: 5px;
+        .footer-icons a img {
+            width: 20px;
+            height: 20px;
         }
     </style>
 </head>
@@ -335,18 +329,15 @@
     <footer>
         <div class="footer-left">
             <img src="your-profile-pic.jpg" alt="Omer Koc">
-            <div class="footer-icons">
-                <a href="https://github.com/" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
-                <a href="https://linkedin.com/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="mailto:example@gmail.com"><img src="gmail-icon.png" alt="Gmail"></a>
+            <div class="info">
+                <p>Omer Koc</p>
+                <p>Data Scientist</p>
+                <div class="footer-icons">
+                    <a href="https://github.com/" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+                    <a href="https://linkedin.com/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:example@gmail.com"><img src="gmail-icon.png" alt="Gmail"></a>
+                </div>
             </div>
-        </div>
-        <div class="footer-right">
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#resume">Resume</a>
-            </nav>
         </div>
     </footer>
 </body>
