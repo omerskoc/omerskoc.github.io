@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omer Koc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .projects-section {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .projects-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .project-category {
+            margin-bottom: 40px;
+        }
+
+        .project-category h2 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 15px;
+        }
+
+        .project-title {
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-date {
+            font-size: 0.85em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-keywords span {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-icons a img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            gap: 5px;
+        }
+
+        .footer-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">Omer Koc</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects" class="active">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </header>
+
+        <div id="projects" class="projects-section">
+            <h1 class="projects-title">Projects</h1>
+
+            <div class="project-category">
+                <h2>Featured</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/project1.jpg" alt="Project 1" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Reach - Discover Events</h3>
+                            <p class="project-date">Summer 2022</p>
+                            <p class="project-description">Reach is an events-based social networking platform for iOS of which I am the co-founder and sole developer.</p>
+                            <div class="project-keywords">
+                                <span>Startup</span>
+                                <span>Mobile App</span>
+                                <span>Swift</span>
+                                <span>Firebase</span>
+                                <span>Maps</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/project2.jpg" alt="Project 2" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">iSenSARS</h3>
+                            <p class="project-date">Fall 2020</p>
+                            <p class="project-description">Developed an Android mobile interface for a novel covid-breathalyzer system that detects sars-cov-2 instantly from exhaled breath.</p>
+                            <div class="project-keywords">
+                                <span>Covid Breathalyzer</span>
+                                <span>Mobile App</span>
+                                <span>Java</span>
+                                <span>Embedded</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h2>Other</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/project3.jpg" alt="Project 3" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Subset Sum Heuristics</h3>
+                            <p class="project-date">Summer 2022</p>
+                            <p class="project-description">Various heuristic algorithms for solving Subset Sum: an NP-Complete combinatorial optimization problem. Includes Integer Linear Programming, Dynamic Programming, and Local Search.</p>
+                            <div class="project-keywords">
+                                <span>Algorithms</span>
+                                <span>Python</span>
+                                <span>Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/project4.jpg" alt="Project 4" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">High Performance Neural Networks using GPUs</h3>
+                            <p class="project-date">Spring 2022</p>
+                            <p class="project-description">Paper I authored for my HPC class that summarizes 10 publications about GPU optimization of DNNs, followed by a discussion on the topic.</p>
+                            <div class="project-keywords">
+                                <span>Machine Learning</span>
+                                <span>Neural Networks</span>
+                                <span>Optimization</span>
+                                <span>GPU</span>
+                                <span>Hardware Acceleration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-left">
+                <img src="images/your-profile-pic.jpg" alt="Omer Koc">
+                <div class="footer-icons">
+                    <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Gmail"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
