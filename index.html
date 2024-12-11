@@ -11,19 +11,24 @@
             padding: 0;
             box-sizing: border-box;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
         }
 
         header {
             width: 100%;
-            max-width: 800px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            background-color: #fff;
+            margin-bottom: 20px;
             border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
         }
 
         .logo {
@@ -59,26 +64,22 @@
             width: 100%;
         }
 
-        .container {
-            width: 100%;
-            max-width: 800px;
-            margin: 50px auto;
-            text-align: center;
-            padding: 0 20px;
-        }
-
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin: 20px auto;
+            margin: 20px 0;
             display: block;
             border: 3px solid #ddd;
         }
 
+        .section {
+            margin-bottom: 30px;
+        }
+
         .section-title {
             font-size: 1.5em;
-            margin: 20px 0 10px;
+            margin-bottom: 10px;
             color: #333;
         }
 
@@ -96,39 +97,60 @@
         .section-content ul li {
             margin: 5px 0;
         }
+
+        .section-content .item {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Omer Koc</div>
-        <nav>
-            <a href="#about" class="active">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#resume">Resume</a>
-        </nav>
-    </header>
+    <div class="main">
+        <header>
+            <div class="logo">Omer Koc</div>
+            <nav>
+                <a href="#about" class="active">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+            </nav>
+        </header>
 
-    <div class="container">
-        <img src="your-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-        <div id="about">
+        <div id="about" class="section">
             <h2 class="section-title">About me</h2>
             <p class="section-content">Welcome to my site! I am passionate about software development, data analysis, and cloud infrastructure. I enjoy building innovative solutions and am proficient in Python and SQL.</p>
         </div>
 
-        <div id="experience">
+        <div id="experience" class="section">
             <h2 class="section-title">Experience</h2>
-            <ul class="section-content">
-                <li><strong>Data Analyst Intern</strong> - XYZ Company (2023 - Present)</li>
-                <li><strong>Teaching Assistant</strong> - Northeastern University (2022 - 2023)</li>
-            </ul>
+            <div class="section-content">
+                <div class="item">
+                    <strong>Data Analyst Intern</strong> - XYZ Company (2023 - Present)<br>
+                    <ul>
+                        <li>Performed data analysis to improve product performance</li>
+                        <li>Created dashboards for sales tracking</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <strong>Teaching Assistant</strong> - Northeastern University (2022 - 2023)<br>
+                    <ul>
+                        <li>Assisted students in data science courses</li>
+                        <li>Graded assignments and projects</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div id="education">
+        <div id="education" class="section">
             <h2 class="section-title">Education</h2>
-            <ul class="section-content">
-                <li><strong>Master's in Computer Science</strong> - Northeastern University (2022 - 2024)</li>
-                <li><strong>Bachelor's in Software Engineering</strong> - ABC University (2018 - 2022)</li>
-            </ul>
+            <div class="section-content">
+                <div class="item">
+                    <strong>Master's in Computer Science</strong> - Northeastern University (2022 - 2024)<br>
+                    Focus: Machine Learning and Data Analysis
+                </div>
+                <div class="item">
+                    <strong>Bachelor's in Software Engineering</strong> - ABC University (2018 - 2022)<br>
+                    Focus: Full-Stack Development
+                </div>
+            </div>
         </div>
     </div>
 </body>
