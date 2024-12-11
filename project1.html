@@ -3,23 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - Energy and Performance</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Energy and Performance-Aware Task Scheduling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section-content {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-left img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-icons a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            gap: 5px;
+        }
+
+        .footer-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a href="index.html">Back to Home</a>
-    </header>
-    <main>
-        <h1>Energy and Performance-Aware Task Scheduling</h1>
-        <p><strong>Spring 2024</strong></p>
-        <img src="images/project1-large.jpg" alt="Project Image">
-        <p>Detailed information about the project goes here...</p>
-        <p>Key Features:</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-        </ul>
-    </main>
+    <div class="main">
+        <header>
+            <div class="logo">Omer Koc</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </header>
+
+        <div id="project-details" class="section">
+            <h1 class="section-title">Energy and Performance-Aware Task Scheduling</h1>
+            <img src="images/project1-large.jpg" alt="Energy and Performance-Aware Task Scheduling" class="project-image">
+            <div class="section-content">
+                <p><strong>Duration:</strong> Spring 2024</p>
+                <p><strong>Description:</strong></p>
+                <p>Designed and implemented task scheduling algorithms for a mobile cloud computing environment, focusing on minimizing energy consumption while meeting performance constraints. This project involved researching energy-efficient strategies and developing optimization algorithms tailored to mobile cloud systems.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Developed task scheduling algorithms using C++.</li>
+                    <li>Optimized energy consumption while meeting performance constraints.</li>
+                    <li>Simulated the algorithms in a cloud computing environment.</li>
+                </ul>
+                <p><strong>Technologies Used:</strong> C++, Optimization, Algorithms</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-left">
+                <img src="images/your-profile-pic.jpg" alt="Omer Koc">
+                <div class="footer-icons">
+                    <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Gmail"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
