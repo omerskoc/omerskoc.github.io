@@ -187,9 +187,13 @@
                 <span class="tag">Natural Language Processing</span>
             </div>
 
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="images/project2/project2-0.png" alt="Project Overview" class="project-image" style="width: 70%; height: 70%;">
+            </div>
+
             <div class="section-content">
                 <h2 class="section-title">Introduction</h2>
-                <p>The project focuses on performing sentiment analysis on IMDb movie reviews to classify them as either positive or negative. This involves leveraging the IMDb Large Movie Review Dataset, which consists of 50,000 balanced reviews, equally split between positive and negative sentiments. The primary motivation is to help users quickly evaluate movie quality by analyzing the textual reviews. Using a mix of traditional machine learning and advanced deep learning techniques, the project explores multiple methods to achieve high classification accuracy, eventually settling on a CNN-LSTM hybrid model that demonstrated exceptional performance.</p>
+                <p>The project focuses on performing sentiment analysis on IMDb movie reviews to classify them as either positive or negative. This involves leveraging the IMDb Large Movie Review Dataset, which consists of 50,000 balanced reviews, equally split between positive and negative sentiments. The primary motivation is to help users quickly evaluate movie quality by analyzing the textual reviews. For more details, see the <a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/IMDB%20Movie%20Review%20Sentiment%20Analysis%20Report%20-%20Omer%20S%20Koc.pdf" target="_blank">project report</a>. Using a mix of traditional machine learning and advanced deep learning techniques, the project explores multiple methods to achieve high classification accuracy, eventually settling on a CNN-LSTM hybrid model that demonstrated exceptional performance.</p>
 
                 <h2 class="section-title">Data Preprocessing and Feature Engineering</h2>
                 <p>Data preprocessing played a critical role in preparing raw reviews for model training. This involved:</p>
@@ -198,18 +202,16 @@
                     <li>Normalizing text using stemming and lemmatization to reduce dimensionality.</li>
                     <li>Tokenizing reviews into smaller units for vector representation.</li>
                 </ul>
-                <p>A Term Frequency-Inverse Document Frequency (TF-IDF) vectorizer was employed to create a feature matrix, effectively capturing word importance within the dataset. These steps ensured the data was structured, noise-free, and ready for training.</p>
+                <p>A Term Frequency-Inverse Document Frequency (TF-IDF) vectorizer was employed to create a feature matrix, effectively capturing word importance within the dataset. These steps ensured the data was structured, noise-free, and ready for training. You can find the implementation in the <a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/Main.ipynb" target="_blank">Python code notebook</a>.</p>
+
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="images/project2/project2-1.png" alt="Preprocessing Visualization" class="project-image" style="width: 80%; height: 80%;">
+                </div>
 
                 <h2 class="section-title">Model Training and Results</h2>
-                <p>Eleven models were tested, including Logistic Regression, Random Forest, and advanced neural networks like CNN-LSTM. While simpler models provided competitive results, the CNN-LSTM hybrid model stood out, achieving a 90% accuracy rate by combining convolutional networks for spatial feature extraction and LSTMs for temporal dependencies. This highlighted the potential of deep learning for text-based sentiment analysis.</p>
+                <p>Eleven models were tested, including Logistic Regression, Random Forest, and advanced neural networks like CNN-LSTM. While simpler models provided competitive results, the CNN-LSTM hybrid model stood out, achieving a 90% accuracy rate by combining convolutional networks for spatial feature extraction and LSTMs for temporal dependencies. This highlighted the potential of deep learning for text-based sentiment analysis. For a detailed explanation of the CNN-LSTM model, check the <a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/CNN_LSTM.ipynb" target="_blank">model implementation code</a>.</p>
 
-                <h2 class="section-title">Resources</h2>
-                <ul>
-                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/IMDB%20Movie%20Review%20Sentiment%20Analysis%20Report%20-%20Omer%20S%20Koc.pdf" target="_blank">Project Report</a></li>
-                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/IMDB%20Analysis%20-%20PDF.pdf" target="_blank">Project Presentation</a></li>
-                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/Main.ipynb" target="_blank">Python Code</a></li>
-                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/CNN_LSTM.ipynb" target="_blank">CNN-LSTM Model Code</a></li>
-                </ul>
+                <p>A comprehensive presentation of the project can be accessed <a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/IMDB%20Analysis%20-%20PDF.pdf" target="_blank">here</a>.</p>
             </div>
         </div>
 
