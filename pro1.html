@@ -46,7 +46,25 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            position: relative;
         }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
 
         .projects-section {
             width: 100%;
@@ -179,7 +197,9 @@
 <body>
     <div class="main">
         <header>
-            <div class="logo">Omer Koc</div>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">Omer Koc</a>
+        </div>
             <nav>
                 <a href="index.html">About</a>
                 <a href="#projects" class="active">Projects</a>
