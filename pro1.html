@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omer Koc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .projects-section {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .projects-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .project-category {
+            margin-bottom: 40px;
+        }
+
+        .project-category h2 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 15px;
+        }
+
+        .project-title {
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-date {
+            font-size: 0.85em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-keywords span {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-left img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-icons a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            gap: 5px;
+        }
+
+        .footer-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .footer-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">Omer Koc</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects" class="active">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </header>
+
+        <div id="projects" class="projects-section">
+            <h1 class="projects-title">Projects</h1>
+
+            <div class="project-category">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a href="project1.html">
+                            <img src="images/project1.png" alt="Project 1" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Energy and Performance-Aware Task Scheduling</h3>
+                                <p class="project-date">Spring 2024</p>
+                                <p class="project-description">Developed and implemented C++ algorithms to optimize task scheduling in mobile cloud computing, focusing on minimizing energy consumption while maintaining strict performance constraints.</p>
+                                <div class="project-keywords">
+                                    <span>C++</span>
+                                    <span>Optimization</span>
+                                    <span>Algorithms</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project2.html">
+                            <img src="images/project2.png" alt="Project 2" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">IMDb Movie Review Sentiment Analysis</h3>
+                                <p class="project-date">Spring 2024</p>
+                                <p class="project-description">Sentiment analysis on IMDb movie reviews using a combination of traditional machine learning and advanced deep learning (CNN-LSTM) models, achieving 90% accuracy through effective preprocessing and feature engineering.</p>
+                                <div class="project-keywords">
+                                    <span>Python</span>
+                                    <span>Machine Learning</span>
+                                    <span>Natural Language Processing (NLP)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project3.html">
+                            <img src="images/project3.png" alt="Project 3" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Online Shopping Database Management System</h3>
+                                <p class="project-date">Fall 2023</p>
+                                <p class="project-description">Designed and implemented a MySQL relational database with advanced features like stored procedures and triggers, integrated it with a Tkinter-based Python application, and automated key operations to efficiently manage and enhance an online shopping platform.</p>
+                                <div class="project-keywords">
+                                    <span>Python</span>
+                                    <span>SQL</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project4.html">
+                            <img src="images/project4.jpg" alt="Project 4" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Design & Implement a Relational Database</h3>
+                                <p class="project-date">Spring 2023</p>
+                                <p class="project-description">Developed a relational database in MySQL for bird strike incidents, incorporating advanced data manipulation with R. Populated the database using a batch processing method, markedly optimizing the speed by 80% over standard methods.</p>
+                                <div class="project-keywords">
+                                    <span>R (Programming Language)</span>
+                                    <span>SQL</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project5.html">
+                            <img src="images/project5.jpg" alt="Project 5" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Mine a Database: PubMed XML to Relational and Analytical Database Transformation</h3>
+                                <p class="project-date">Spring 2023</p>
+                                <p class="project-description">Extracted structured data from PubMed XML documents and converted it into a relational SQLite database to serve as a transactional database. Integrated and synchronized data between transactional and analytical databases to support dual-database querying, simulating real-world data pipelines.</p>
+                                <div class="project-keywords">
+                                    <span>R (Programming Language)</span>
+                                    <span>SQL</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="project6.html">
+                            <img src="images/project6.jpg" alt="Project 6" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Intraday Electricity Market Price Forecast Using Machine Learning</h3>
+                                <p class="project-date">2021</p>
+                                <p class="project-description">Achieved a $1.5 MAE using a CNN-LSTM hybrid model, outperforming other models including Bi-LSTM and GRU.</p>
+                                <div class="project-keywords">
+                                    <span>Machine Learning</span>
+                                    <span>Python</span>
+                                    <span>Neural Networks</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-left">
+                <img src="images/your-profile-pic.jpg" alt="Omer Koc">
+                <div class="footer-icons">
+                    <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Gmail"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
