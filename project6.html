@@ -47,6 +47,14 @@
             color: #333;
             font-weight: bold;
             position: relative;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        nav a img {
+            width: 16px;
+            height: 16px;
         }
 
         nav a::after {
@@ -170,11 +178,12 @@
                 <a href="index.html">Home</a>
                 <a href="projects.html" class="active">Projects</a>
                 <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                
             </nav>
         </header>
 
         <div id="project-details" class="section">
-            <h1 class="section-title">Intraday Electricity Market Price Forecast Using Machine Learning</h1>
+            <h1 class="section-title">Intraday Electricity Market Price Forecast Using Machine Learning <a href="https://github.com/omerskoc/intraday-electricity-market-price-forecast" target="_blank"><img src="images/github-icon.png" alt="GitHub" style="width: 20px; height: 20px; margin-left: 10px;"></a></h1>
             <p class="section-content"><strong>Spring 2024</strong></p>
             <div class="tags">
                 <span class="tag">Python</span>
