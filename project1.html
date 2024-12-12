@@ -183,13 +183,24 @@
             </div>
             <img src="images/project1-large.jpg" alt="Energy and Performance-Aware Task Scheduling" class="project-image">
             <div class="section-content">
-                <p><strong>Description:</strong></p>
-                <p>Designed and implemented task scheduling algorithms for a mobile cloud computing environment, focusing on minimizing energy consumption while meeting performance constraints. This project involved researching energy-efficient strategies and developing optimization algorithms tailored to mobile cloud systems.</p>
-                <p><strong>Key Features:</strong></p>
+                <h2 class="section-title">Introduction to Task Scheduling Optimization</h2>
+                <p>In today’s mobile cloud computing landscape, the efficient scheduling of tasks between local resources and the cloud is crucial for balancing energy consumption and performance. My project tackles this problem by implementing the task scheduling algorithms presented in the research paper <em>Energy and Performance-Aware Task Scheduling in a Mobile Cloud Computing Environment</em>. The core goal is to minimize energy consumption while respecting hard application completion time constraints. Using this approach, the project demonstrates significant energy savings with only minor increases in total execution time.</p>
+
+                <h2 class="section-title">Implementation Highlights</h2>
+                <p>The implementation is built in C++ and utilizes structured data models to represent tasks and cores. The project leverages algorithms for priority calculation, task migration, and energy/time optimization. Key components include:</p>
                 <ul>
-                    <li>Developed task scheduling algorithms using C++.</li>
-                    <li>Optimized energy consumption while meeting performance constraints.</li>
-                    <li>Simulated the algorithms in a cloud computing environment.</li>
+                    <li><strong>Task Initialization:</strong> Defining tasks with attributes like execution times, dependencies, and weights.</li>
+                    <li><strong>Priority Calculation:</strong> Recursively computing the importance of each task based on its critical path.</li>
+                    <li><strong>Energy and Time Metrics:</strong> Calculating the total energy consumed by cores and cloud, and ensuring execution time does not exceed the specified threshold.</li>
+                    <li><strong>Dynamic Scheduling:</strong> Migrating tasks between cores and the cloud to achieve optimal results.</li>
+                </ul>
+                <p>The program processes multiple input examples, visualizes task scheduling results, and compares initial and optimized schedules, emphasizing significant energy reductions.</p>
+
+                <h2 class="section-title">Achievements</h2>
+                <ul>
+                    <li><strong>Initial vs. Final Scheduling:</strong> The system reduces total energy consumption by up to 81% while marginally increasing total execution time.</li>
+                    <li><strong>Scalability:</strong> Successfully handles complex task graphs with up to 20 tasks.</li>
+                    <li><strong>Efficiency:</strong> Outputs are generated in microseconds, showcasing the algorithm's real-time capabilities. This project exemplifies how theoretical concepts in task scheduling can be implemented and tested in a practical setting, demonstrating their utility in real-world applications.</li>
                 </ul>
             </div>
         </div>
