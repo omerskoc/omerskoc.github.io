@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb Movie Review Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .section-content {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-left img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-icons a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            gap: 5px;
+        }
+
+        .footer-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">Omer Koc</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </header>
+
+        <div id="project-details" class="section">
+            <h1 class="section-title">
+                IMDb Movie Review Sentiment Analysis
+                <a href="https://github.com/omerskoc/imdb-sentiment-analysis/tree/main" target="_blank">
+                    <img src="images/github-icon.png" alt="GitHub" style="width: 30px; height: 30px; vertical-align: middle;">
+                </a>
+            </h1>
+            <p class="section-content"><strong>Spring 2024</strong></p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Natural Language Processing</span>
+            </div>
+
+            <div class="section-content">
+                <h2 class="section-title">Introduction</h2>
+                <p>The project focuses on performing sentiment analysis on IMDb movie reviews to classify them as either positive or negative. This involves leveraging the IMDb Large Movie Review Dataset, which consists of 50,000 balanced reviews, equally split between positive and negative sentiments. The primary motivation is to help users quickly evaluate movie quality by analyzing the textual reviews. Using a mix of traditional machine learning and advanced deep learning techniques, the project explores multiple methods to achieve high classification accuracy, eventually settling on a CNN-LSTM hybrid model that demonstrated exceptional performance.</p>
+
+                <h2 class="section-title">Data Preprocessing and Feature Engineering</h2>
+                <p>Data preprocessing played a critical role in preparing raw reviews for model training. This involved:</p>
+                <ul>
+                    <li>Cleaning data by removing HTML tags, URLs, stopwords, and punctuation.</li>
+                    <li>Normalizing text using stemming and lemmatization to reduce dimensionality.</li>
+                    <li>Tokenizing reviews into smaller units for vector representation.</li>
+                </ul>
+                <p>A Term Frequency-Inverse Document Frequency (TF-IDF) vectorizer was employed to create a feature matrix, effectively capturing word importance within the dataset. These steps ensured the data was structured, noise-free, and ready for training.</p>
+
+                <h2 class="section-title">Model Training and Results</h2>
+                <p>Eleven models were tested, including Logistic Regression, Random Forest, and advanced neural networks like CNN-LSTM. While simpler models provided competitive results, the CNN-LSTM hybrid model stood out, achieving a 90% accuracy rate by combining convolutional networks for spatial feature extraction and LSTMs for temporal dependencies. This highlighted the potential of deep learning for text-based sentiment analysis.</p>
+
+                <h2 class="section-title">Resources</h2>
+                <ul>
+                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/IMDB%20Movie%20Review%20Sentiment%20Analysis%20Report%20-%20Omer%20S%20Koc.pdf" target="_blank">Project Report</a></li>
+                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/IMDB%20Analysis%20-%20PDF.pdf" target="_blank">Project Presentation</a></li>
+                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/Main.ipynb" target="_blank">Python Code</a></li>
+                    <li><a href="https://github.com/omerskoc/imdb-sentiment-analysis/blob/main/CNN_LSTM.ipynb" target="_blank">CNN-LSTM Model Code</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-left">
+                <img src="images/your-profile-pic.jpg" alt="Omer Koc">
+                <div class="footer-icons">
+                    <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Gmail"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
