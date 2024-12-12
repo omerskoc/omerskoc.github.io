@@ -22,19 +22,21 @@
             padding: 20px;
         }
 
-        header {
+         header {
             width: 100%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: space-between; /* Yazıları yatayda ayır */
+            align-items: center; /* Yazıları dikeyde ortala */
             margin-bottom: 20px;
             border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
+            padding: 20px 0; /* Yukarı ve aşağı boşluk */
+            height: auto; /* Sabit yükseklik kullanma */
         }
 
         .logo {
-            font-size: 1.5em;
-            font-weight: bold;
+            font-size: 1.2em; /* Reduced font size */
+            font-weight: normal; /* Changed font to lighter weight */
+            font-family: 'Helvetica Neue', sans-serif; /* Updated font */
         }
 
         nav {
