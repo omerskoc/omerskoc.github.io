@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intraday Electricity Market Price Forecasting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .section-content {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            gap: 5px;
+        }
+
+        .footer-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="logo">Omer Koc</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </header>
+
+        <div id="project-details" class="section">
+            <h1 class="section-title">Intraday Electricity Market Price Forecasting</h1>
+            <p class="section-content"><strong>Spring 2024</strong></p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Energy Market</span>
+            </div>
+
+            <div class="section-content">
+                <h2 class="section-title">Project Objective</h2>
+                <p>The primary goal of this project is to forecast intraday electricity market prices using advanced machine learning and statistical models. The project specifically focuses on the Turkish Intraday Electricity Market, leveraging both simple and complex predictive models to address volatility and provide actionable insights for market participants.</p>
+
+                <h2 class="section-title">Implementation Details</h2>
+                <h3>Data Processing</h3>
+                <ul>
+                    <li>Data from the Turkish Energy Market (EPIAS) was used, covering intraday and day-ahead prices.</li>
+                    <li>Techniques such as anomaly detection using Facebook's Prophet and feature selection algorithms (e.g., Ridge, Lasso) were applied to refine the dataset and focus on key variables.</li>
+                </ul>
+                <h3>Modeling Approach</h3>
+                <ul>
+                    <li>Basic statistical models: Moving Average, Weighted Moving Average, and Exponential Smoothing.</li>
+                    <li>Advanced deep learning models: Long Short-Term Memory (LSTM), Bidirectional LSTM (BiLSTM), and hybrid CNN-LSTM architectures.</li>
+                    <li>CNN-LSTM provided the best results with a Mean Absolute Error (MAE) of 20.79.</li>
+                </ul>
+                <h3>Tools and Technologies</h3>
+                <ul>
+                    <li>Python for implementation, including libraries like TensorFlow, Keras, and Scikit-learn.</li>
+                    <li>Visualization of results to highlight trends and patterns.</li>
+                </ul>
+
+                <h2 class="section-title">Key Insights and Outcomes</h2>
+                <ul>
+                    <li>Advanced machine learning techniques like LSTM effectively captured the temporal dependencies of electricity prices, outperforming simpler models.</li>
+                    <li>The study demonstrated the feasibility of using hybrid CNN-LSTM models for accurate intraday price forecasting.</li>
+                    <li>The integration of feature selection and anomaly detection significantly improved prediction reliability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-left">
+                <img src="images/your-profile-pic.jpg" alt="Omer Koc">
+                <div class="footer-icons">
+                    <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Gmail"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
 
