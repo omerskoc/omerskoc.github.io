@@ -32,27 +32,23 @@
             padding-bottom: 10px;
         }
 
-        /* Alt çizgiyi kaldırmak için */
-        .logo-link {
-            text-decoration: none;
-            color: inherit; /* Mevcut yazı rengini korur */
+        .logo {
+            font-size: 1.5em;
             font-weight: bold;
-            position: relative; /* Logo stilini nav'dan ayırır */
         }
-        
-        /* Hover olduğunda underline eklenmemesi */
-        .logo-link:hover::after, .logo-link::after {
-            content: none;
+
+        nav {
+            display: flex;
+            gap: 20px;
         }
-        
-        /* Diğer nav linkleri için geçerli olan hover underline korunur */
+
         nav a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
             position: relative;
         }
-        
+
         nav a::after {
             content: '';
             display: block;
@@ -64,11 +60,10 @@
             bottom: -5px;
             left: 0;
         }
-        
+
         nav a:hover::after, nav a.active::after {
             width: 100%;
         }
-
 
         .profile-pic {
             width: 150px;
@@ -189,9 +184,9 @@
 <body>
     <div class="main">
         <header>
-            <a href="index.html" class="logo">Omer Koc</a>
+            <div class="logo">Omer Koc</div>
             <nav>
-                <a href="index.html" class="active">About</a>
+                <a href="#about" class="active">About</a>
                 <a href="projects.html" class="active">Projects</a>
                 <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </nav>
@@ -374,7 +369,7 @@
             </div>
         </div>
         <div class="footer-right">
-            <a href="index.html" class="active">About</a>
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
