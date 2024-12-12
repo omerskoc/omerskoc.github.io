@@ -32,23 +32,27 @@
             padding-bottom: 10px;
         }
 
-        .logo {
-            font-size: 1.5em;
+        /* Alt çizgiyi kaldırmak için */
+        .logo-link {
+            text-decoration: none;
+            color: inherit; /* Mevcut yazı rengini korur */
             font-weight: bold;
+            position: relative; /* Logo stilini nav'dan ayırır */
         }
-
-        nav {
-            display: flex;
-            gap: 20px;
+        
+        /* Hover olduğunda underline eklenmemesi */
+        .logo-link:hover::after, .logo-link::after {
+            content: none;
         }
-
+        
+        /* Diğer nav linkleri için geçerli olan hover underline korunur */
         nav a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
             position: relative;
         }
-
+        
         nav a::after {
             content: '';
             display: block;
@@ -60,10 +64,11 @@
             bottom: -5px;
             left: 0;
         }
-
+        
         nav a:hover::after, nav a.active::after {
             width: 100%;
         }
+
 
         .profile-pic {
             width: 150px;
