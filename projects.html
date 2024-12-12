@@ -46,23 +46,6 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #333;
-            transition: width 0.3s;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-        }
-
-        nav a:hover::after, nav a.active::after {
-            width: 100%;
         }
 
         .projects-section {
@@ -108,6 +91,7 @@
             width: 100%;
             height: 150px;
             object-fit: cover;
+            cursor: pointer;
         }
 
         .project-content {
@@ -190,12 +174,6 @@
             color: #333;
             font-weight: bold;
         }
-
-        .footer-right a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -215,7 +193,7 @@
             <div class="project-category">
                 <div class="projects-grid">
                     <div class="project-card">
-                        <img src="images/project1.png" alt="Project 1" class="project-image">
+                        <img src="images/project1.png" alt="Project 1" class="project-image" onclick="location.href='project1.html'">
                         <div class="project-content">
                             <h3 class="project-title">Energy and Performance-Aware Task Scheduling</h3>
                             <p class="project-date">Spring 2024</p>
@@ -229,7 +207,7 @@
                     </div>
 
                     <div class="project-card">
-                        <img src="images/project2.png" alt="Project 2" class="project-image">
+                        <img src="images/project2.png" alt="Project 2" class="project-image" onclick="location.href='project2.html'">
                         <div class="project-content">
                             <h3 class="project-title">IMDb Movie Review Sentiment Analysis</h3>
                             <p class="project-date">Spring 2024</p>
@@ -243,7 +221,7 @@
                     </div>
 
                     <div class="project-card">
-                        <img src="images/project3.png" alt="Project 3" class="project-image">
+                        <img src="images/project3.png" alt="Project 3" class="project-image" onclick="location.href='project3.html'">
                         <div class="project-content">
                             <h3 class="project-title">Online Shopping Database Management System</h3>
                             <p class="project-date">Fall 2023</p>
@@ -256,37 +234,37 @@
                     </div>
 
                     <div class="project-card">
-                        <img src="images/project4.jpg" alt="Project 4" class="project-image">
+                        <img src="images/project4.jpg" alt="Project 4" class="project-image" onclick="location.href='project4.html'">
                         <div class="project-content">
-                            <h3 class="project-title">Design & Implement a Relational Database</h3>
+                            <h3 class="project-title">Bird Strike Database Management Project</h3>
                             <p class="project-date">Spring 2023</p>
-                            <p class="project-description">Developed a relational database in MySQL for bird strike incidents, incorporating advanced data manipulation with R. Populated the database using a batch processing method, markedly optimizing the speed by 80% over standard methods</p>
+                            <p class="project-description">Developed a relational database in MySQL for bird strike incidents, incorporating advanced data manipulation with R. Populated the database using a batch processing method, markedly optimizing the speed by 80% over standard methods.</p>
                             <div class="project-keywords">
-                                <span>R (Programing Languages)</span>
+                                <span>R (Programming Language)</span>
                                 <span>SQL</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <img src="images/project5.jpg" alt="Project 5" class="project-image">
+                        <img src="images/project5.jpg" alt="Project 5" class="project-image" onclick="location.href='project5.html'">
                         <div class="project-content">
                             <h3 class="project-title">Mine a Database: PubMed XML to Relational and Analytical Database Transformation</h3>
                             <p class="project-date">Spring 2023</p>
                             <p class="project-description">Extracted structured data from PubMed XML documents and converted it into a relational SQLite database to serve as a transactional database. Integrated and synchronized data between transactional and analytical databases to support dual-database querying, simulating real-world data pipelines.</p>
                             <div class="project-keywords">
-                                <span>R (Programing Languages)</span>
+                                <span>R (Programming Language)</span>
                                 <span>SQL</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <img src="images/project6.jpg" alt="Project 6" class="project-image">
+                        <img src="images/project6.jpg" alt="Project 6" class="project-image" onclick="location.href='project6.html'">
                         <div class="project-content">
                             <h3 class="project-title">Intraday Electricity Market Price Forecast Using Machine Learning</h3>
                             <p class="project-date">2021</p>
-                            <p class="project-description">Achieved a $1.5 MAE using a CNN-LSTM hybrid model, outperforming other models including Bi-LSTM and GRU.</p>
+                            <p class="project-description">Utilized advanced machine learning techniques, including CNN-LSTM and LSTM architectures, to accurately forecast intraday electricity market prices in Turkey, emphasizing data preprocessing, anomaly detection, and feature selection for enhanced predictive reliability.</p>
                             <div class="project-keywords">
                                 <span>Machine Learning</span>
                                 <span>Python</span>
@@ -296,16 +274,16 @@
                     </div>
                 </div>
             </div>
-
+        </div>
 
         <footer>
             <div class="footer-left">
-            <img src="images/your-profile-pic.jpg" alt="Omer Koc">
-            <div class="footer-icons">
-                <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Gmail"></a>
-            </div>
+                <img src="images/your-profile-pic.jpg" alt="Omer Koc">
+                <div class="footer-icons">
+                    <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Gmail"></a>
+                </div>
             </div>
             <div class="footer-right">
                 <a href="#about">About</a>
