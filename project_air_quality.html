@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Air Quality Forecasting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .section-content {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .tags {
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background-color: #eee;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.85em;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+
+    .footer-icons img {
+      width: 30px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <header>
+      <div class="logo">Omer Koc</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="doc/omer_koc_resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </header>
+
+    <section>
+      <h1 class="section-title">
+        Urban Air Quality Forecasting Using Traffic and Weather Data
+        <a href="https://github.com/Shrutikute09/Capstone_2025" target="_blank">
+          <img src="images/github-icon.png" alt="GitHub" style="width: 30px; vertical-align: middle;">
+        </a>
+      </h1>
+      <p class="section-content"><strong>Spring 2025</strong></p>
+
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">XGBoost</span>
+        <span class="tag">LSTM</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Time Series</span>
+        <span class="tag">Tableau</span>
+      </div>
+
+      <div class="section-content">
+        <h2 class="section-title">Project Overview</h2>
+        <p>This capstone project analyzes how weather and traffic impact air pollution in NYC, Chicago, and LA. Using five years of data (2020–2024), we forecast pollutant levels (PM2.5, PM10, NO2) with machine learning and deep learning models.</p>
+
+        <h2 class="section-title">Implementation Highlights</h2>
+        <ul>
+          <li><strong>Data:</strong> Merged datasets from EPA, Open-Meteo, and NYC MTA.</li>
+          <li><strong>Models:</strong> XGBoost and Random Forest for regression; LSTM and ARIMA for time-series forecasting.</li>
+          <li><strong>Performance:</strong> XGBoost achieved RMSE as low as 4.35; LSTM outperformed ARIMA for sequential predictions.</li>
+          <li><strong>Visualization:</strong> Built a Tableau dashboard to explore trends and model outputs interactively.</li>
+        </ul>
+
+        <h2 class="section-title">Key Results</h2>
+        <ul>
+          <li>XGBoost showed highest accuracy and robustness.</li>
+          <li>LSTM effectively modeled long-term patterns, especially for PM2.5.</li>
+          <li>Traffic data significantly improved predictions for NYC.</li>
+          <li>Wind speed and temperature were strong predictors across cities.</li>
+        </ul>
+
+        <p>See full code and report on <a href="https://github.com/Shrutikute09/Capstone_2025" target="_blank">GitHub</a>, and explore the <a href="https://public.tableau.com/app/profile/atreyo.das/viz/Capstone_Air_Quality_17440009911560/Dashboard1" target="_blank">interactive dashboard</a>.</p>
+      </div>
+
+      <img src="images/project_air_quality.png" alt="Air Quality Visualization" class="project-image">
+    </section>
+
+    <footer>
+      <div class="footer-icons">
+        <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Email"></a>
+      </div>
+      <div>
+        <a href="index.html">Home</a> |
+        <a href="projects.html">Projects</a> |
+        <a href="doc/omer_koc_resume.pdf" target="_blank">Resume</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
