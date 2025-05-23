@@ -197,8 +197,10 @@
             
             <div class="section-content">
                 <h2 class="section-title">Introduction to LLM Bias Evaluation</h2>             
-                <p>Large Language Models (LLMs) like ChatGPT, Copilot, and DeepSeek shape how information is generated and consumed. This project evaluates how these models handle sensitive topics such as gender, race, socio-economic status, and politics by analyzing over 400 structured prompts. The goal is to uncover hidden biases and promote more transparent AI systems.</p>
-
+                <p>Large Language Models (LLMs) such as ChatGPT, Copilot, and DeepSeek have become foundational tools in content generation, decision support, and interactive systems. As these models increasingly mediate access to knowledge, shape public discourse, and influence decision-making, concerns around algorithmic bias and fairness have become critically important.</p>
+                <p>This project systematically evaluates how leading LLMs respond to sensitive and socially impactful prompts related to four core dimensions of bias: gender, race, socio-economic status, and political ideology. We designed and administered over 400 structured prompts, categorized into multiple prompt types (e.g., multiple choice, ranking, completion, open-ended generation), and distributed them across the three models.</p>
+                <p>Each model’s outputs were then analyzed using a combination of quantitative methods (e.g., word frequency analysis, TF-IDF comparisons, sentiment scoring) and qualitative assessments (e.g., stereotype presence, language framing, omission bias). The aim was to uncover implicit biases, assess response consistency, and explore how different models handle ethically complex or potentially polarizing topics.</p>
+                <p>By identifying patterns of skewed outputs, preferential treatment, or discriminatory framing, the project highlights both the vulnerabilities and design choices embedded within these systems. Ultimately, the goal is to contribute to the development of more transparent, accountable, and fair AI systems by offering insights that can inform model training, deployment strategies, and policy-level guidelines for responsible AI usage.</p>
                 <h2 class="section-title">Implementation Highlights</h2>
                 <ul>
                     <li><strong>Prompt Engineering:</strong> 400 prompts created across four bias types (gender, race, SES, politics) with varied task formats.</li>
