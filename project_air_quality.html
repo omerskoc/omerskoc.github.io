@@ -9,19 +9,25 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       background-color: #fff;
     }
 
     .main {
+      width: 100%;
       max-width: 800px;
-      margin: auto;
       padding: 20px;
     }
 
     header {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 20px;
       border-bottom: 1px solid #ccc;
       padding-bottom: 10px;
     }
@@ -31,66 +37,130 @@
       font-weight: bold;
     }
 
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
     nav a {
-      margin-left: 20px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #333;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .section {
+      margin-bottom: 30px;
     }
 
     .section-title {
       font-size: 1.5em;
-      margin-top: 20px;
       margin-bottom: 10px;
       color: #333;
+      font-weight: bold;
+      text-align: left;
     }
 
     .section-content {
-      font-size: 0.95em;
-      color: #555;
+      font-size: 0.9em;
       line-height: 1.6;
-    }
-
-    .tags {
-      margin: 10px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      background-color: #eee;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 0.85em;
-      font-weight: bold;
-    }
-
-    ul {
-      padding-left: 20px;
+      color: #555;
     }
 
     .project-image {
       width: 100%;
-      max-width: 100%;
+      height: auto;
       margin: 20px 0;
       border-radius: 5px;
     }
 
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .tag {
+      background-color: #f0f0f0;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.85em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+
     footer {
+      width: 100%;
+      max-width: 800px;
       display: flex;
       justify-content: space-between;
-      border-top: 1px solid #ccc;
+      align-items: center;
       margin-top: 40px;
       padding-top: 20px;
+      border-top: 1px solid #ccc;
     }
 
-    .footer-icons img {
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-left img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-icons a img {
       width: 30px;
-      margin-right: 10px;
+      height: 30px;
     }
 
-    
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      gap: 5px;
+    }
+
+    .footer-right a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -100,15 +170,15 @@
       <nav>
         <a href="index.html">Home</a>
         <a href="projects.html" class="active">Projects</a>
-        <a href="doc/omer_koc_resume.pdf" target="_blank">Resume</a>
+        <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
     </header>
 
-    <section>
+    <div id="project-details" class="section">
       <h1 class="section-title">
         Urban Air Quality Forecasting
         <a href="https://github.com/Shrutikute09/Capstone_2025" target="_blank">
-          <img src="images/github-icon.png" alt="GitHub" style="width: 30px; vertical-align: middle;">
+          <img src="images/github-icon.png" alt="GitHub" style="width: 30px; height: 30px; vertical-align: middle;">
         </a>
       </h1>
       <p class="section-content"><strong>Spring 2025</strong></p>
@@ -122,11 +192,10 @@
         <span class="tag">Tableau</span>
       </div>
 
-<div style="text-align: center;">
-    <img src="images/airquality-scheme.png" alt="Air Quality Visualization" class="project-image" style="width: 40%;">
-</div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/airquality-scheme.png" alt="Air Quality Visualization" class="project-image" style="width: 60%; height: auto;">
+      </div>
 
-      
       <div class="section-content">
         <h2 class="section-title">Project Overview</h2>
         <p>This capstone project analyzes how weather and traffic impact air pollution in NYC, Chicago, and LA. Using five years of data (2020–2024), we forecast pollutant levels (PM2.5, PM10, NO2) with machine learning and deep learning models.</p>
@@ -149,17 +218,21 @@
 
         <p>See full code and report on <a href="https://github.com/Shrutikute09/Capstone_2025" target="_blank">GitHub</a>, and explore the <a href="https://public.tableau.com/app/profile/atreyo.das/viz/Capstone_Air_Quality_17440009911560/Dashboard1" target="_blank">interactive dashboard</a>.</p>
       </div>
+    </div>
 
     <footer>
-      <div class="footer-icons">
-        <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-        <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Email"></a>
+      <div class="footer-left">
+        <img src="images/your-profile-pic.jpg" alt="Omer Koc">
+        <div class="footer-icons">
+          <a href="https://github.com/omerskoc" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/omerskoc/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+          <a href="mailto:omerseyfeddinkoc@gmail.com"><img src="images/gmail-icon.png" alt="Email"></a>
+        </div>
       </div>
-      <div>
-        <a href="index.html">Home</a> |
-        <a href="projects.html">Projects</a> |
-        <a href="doc/omer_koc_resume.pdf" target="_blank">Resume</a>
+      <div class="footer-right">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="doc/omer_koc_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
     </footer>
   </div>
