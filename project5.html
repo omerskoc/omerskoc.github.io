@@ -189,25 +189,23 @@
 
             <div class="section-content">
                 <h2 class="section-title">Project Overview</h2>
-                <p>This project integrates OLTP and OLAP methodologies to transform XML-based metadata into actionable insights, leveraging relational schema design and advanced analytical queries.</p>
-
+                <p>
+                  This project bridges transactional and analytical processing by integrating <strong>OLTP</strong> and <strong>OLAP</strong> methodologies to transform XML-based publication metadata into structured, queryable formats. The workflow begins with parsing and cleaning metadata using <strong>R</strong> and <strong>XPath</strong>, followed by storing it in a relational schema using <strong>SQLite</strong>. Finally, a <strong>star schema</strong> is implemented in <strong>MySQL</strong> for complex OLAP-style queries to extract meaningful trends.
+                </p>
+            
                 <h2 class="section-title">Key Features</h2>
-                <div>
-                    <ul>
-                        <li>Normalized and star schema design for efficient query processing.</li>
-                        <li>Data parsing and transformation using R and XPath techniques.</li>
-                        <li>Analytical queries for insights into publication trends.</li>
-                    </ul>
-                </div>
-
-                <h2 class="section-title">Technologies</h2>
-                <div>
-                    <ul>
-                        <li><strong>SQLite</strong>: Schema design and data ingestion.</li>
-                        <li><strong>MySQL</strong>: OLAP schema and analytical queries.</li>
-                        <li><strong>R</strong>: XML parsing and data manipulation.</li>
-                    </ul>
-                </div>
+                <ul>
+                  <li>Designed both <strong>normalized schemas</strong> (OLTP) for integrity and <strong>star schemas</strong> (OLAP) for efficient analytical querying.</li>
+                  <li>Used <strong>R programming</strong> and <strong>XPath</strong> to extract structured data from unstructured XML sources.</li>
+                  <li>Wrote optimized <strong>SQL queries</strong> to analyze trends in publication dates, authorship patterns, and metadata quality over time.</li>
+                </ul>
+            
+                <h2 class="section-title">Technologies Used</h2>
+                <ul>
+                  <li><strong>SQLite:</strong> Used for initial schema design and ingesting cleaned metadata in an OLTP structure.</li>
+                  <li><strong>MySQL:</strong> Hosted the OLAP star schema and enabled multi-dimensional analysis.</li>
+                  <li><strong>R Programming:</strong> Performed XML parsing, data transformation, and export to SQL-ready formats.</li>
+                </ul>
 
                 <p>
                     For a detailed overview of the project, check out the 
